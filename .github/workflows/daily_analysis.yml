@@ -32,7 +32,7 @@ jobs:
   analyze:
     runs-on: ubuntu-latest
     # 添加超时限制，防止任务卡死
-    timeout-minutes: 30
+    timeout-minutes: 60
     
     steps:
       - name: 随机延迟（避免固定时间访问）
@@ -271,3 +271,4 @@ jobs:
             echo "📜 最近日志（最后 30 行）:"
             tail -30 logs/stock_analysis_*.log 2>/dev/null || echo "无日志"
           fi
+
